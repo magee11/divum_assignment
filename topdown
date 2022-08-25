@@ -1,11 +1,13 @@
-a=[1,2,5]
-b=11
-count=0
-d=[]
-while b!=0:
-    if b>=a[-1]:
-        b=b-a[-1]
-        count=count+1
-    if b<a[-1]:
-        d.append(a.pop())
-print(count)
+total = 11
+coins = [1,2,5]
+final = []
+while(total>0):
+    temp = []
+    for i in coins:
+        t = total-i
+        if t>=0:
+            temp.append(total-i)
+    small = temp.index(min(temp))
+    final.append(coins[small])
+    total=temp[small]
+print(final)
