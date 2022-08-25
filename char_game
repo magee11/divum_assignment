@@ -1,0 +1,17 @@
+values = ['a','b','c','','e','f','g','h','i','j','k']
+dummy= 1
+n=len(values)
+i=0
+while(values.count('-')<n-1):
+    if i==n:
+        i=0
+    if values[i]!='-':
+        if dummy%5==0 or dummy%10==5:
+            dummy+=1
+            values[i]='-' 
+        if values[i]!='-':
+            dummy+=1
+    i+=1
+for j in values:
+    if j!='-':
+        print("the final values is ",j)
